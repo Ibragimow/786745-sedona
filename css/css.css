@@ -66,48 +66,57 @@ text-align: center;
 }
 
 .feature-big {
+  min-width: 1200px;
+  min-height: 256px;
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin: 0;
-  padding: 0;
-
+  box-sizing: border-box;
   }
 
 .feature-big .feature-text {
   min-width: 400px;
-  min-height: 256px;
+  min-height: inherit;
   background-color: #90b2d0;
   color: #ffffff;
   text-align: center;
   align-content: space-between;
   box-sizing: border-box;
+  padding-left: 60px;
+  padding-right: 60px;
 
 }
 
 .feature-big .feature-text h2 {
   list-style: none;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 21px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 50px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
 }
 
+
 .feature-big .feature-text p {
-    font-size: 10px;
-    padding-left: 60px;
-    padding-right: 61px;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 .feature-big .feature-text h3 {
-  font-size: 10px;
+  font-size: 14px;
   text-decoration: none;
+  font-weight: normal;
 }
 
 
 .feature-big .feature-pic {
-  min-height: 256px;
+  min-width: 800px;
+  min-height: inherit;
   background-color: #ffffff;
 }
-
 
 .town-attractors {
   display: flex;
@@ -116,10 +125,13 @@ text-align: center;
   box-sizing: border-box;
   min-width: 1200px;
   min-height: 330px;
-  margin: 0;
-  padding: 0;
   list-style: none;
+}
 
+.town-attractors .logo {
+  padding-top: 60px;
+  width: 75px;
+  height: 72px;
 }
 
 .town-feature-item {
@@ -127,21 +139,22 @@ text-align: center;
   min-height: 330px;
   text-align: center;
   align-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 88px;
   box-sizing: border-box;
 
 }
 
-.town-feature-item .h2 {
-font-size: 15px;
-font-weight: bold;
+.town-feature-item h2 {
+font-size: 21px;
 line-height: 21px;
-
 
 }
 
-.town-feature-item .logo {
+.town-feature-item p {
+font-size: 14px;
+line-height: 21px;
+padding-left: 60px;
+padding-right: 55px;
+padding-bottom: 88px;
 
 }
 
@@ -153,10 +166,32 @@ line-height: 21px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
-.feature {
+.features .feature h2 {
+  font-size: 21px;
+  line-height: 21px;
   text-align: center;
-  min-height: 256px;
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-top: 50px;
 }
+
+.features .feature h3 {
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: center;
+}
+
+.features .feature p {
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 63px;
+  padding-right: 63px;
+  padding-bottom: 88px;
+  text-align: center;
+}
+
+.
