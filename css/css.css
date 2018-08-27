@@ -68,34 +68,43 @@ text-align: center;
 .feature-big {
   display: flex;
   flex-direction: row;
-  width: 1200px;
-  height: 256px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   }
 
 .feature-big .feature-text {
-  width: 400px;
-  height: 256px;
+  min-width: 400px;
+  min-height: 256px;
   background-color: #90b2d0;
   color: #ffffff;
   text-align: center;
   align-content: space-between;
-  padding-top: 50px;
   box-sizing: border-box;
+
 }
 
 .feature-big .feature-text h2 {
+  list-style: none;
   font-size: 15px;
+  line-height: 21px;
 }
 
 .feature-big .feature-text p {
     font-size: 10px;
     padding-left: 60px;
-    padding-right: 60px;
+    padding-right: 61px;
+}
+
+.feature-big .feature-text h3 {
+  font-size: 10px;
+  text-decoration: none;
 }
 
 
 .feature-big .feature-pic {
-  height: 256px;
+  min-height: 256px;
   background-color: #ffffff;
 }
 
@@ -104,14 +113,50 @@ text-align: center;
   display: flex;
   flex-direction: row;
   align-content: space-between;
+  box-sizing: border-box;
+  min-width: 1200px;
+  min-height: 330px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
 }
 
 .town-feature-item {
   min-width: 400px;
   min-height: 330px;
+  text-align: center;
+  align-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 88px;
   box-sizing: border-box;
+
+}
+
+.town-feature-item .h2 {
+font-size: 15px;
+font-weight: bold;
+line-height: 21px;
+
+
 }
 
 .town-feature-item .logo {
-  padding: auto;
+
+}
+
+.features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 256px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.feature {
+  text-align: center;
+  min-height: 256px;
 }
