@@ -38,12 +38,19 @@ a {
 .site-navigation li:nth-child(3) a,
 .site-navigation li:last-child a {
   text-align: right;
-  color: green;
+  color: black;
 }
 
 
 .site-navigation a {
   color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #90b1d0;
 }
 
 .welcome-text {
@@ -116,6 +123,7 @@ text-align: center;
   min-width: 800px;
   min-height: inherit;
   background-color: #ffffff;
+  line-height: 0;
 }
 
 .town-attractors {
@@ -194,4 +202,128 @@ padding-bottom: 88px;
   text-align: center;
 }
 
-.
+.are-you-interested {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+
+.accommodation-title p:not(.are-you-interested) {
+  font-size: 14px;
+  text-align: center;
+}
+
+.accommodation-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 568px;
+  height: 395px;
+  margin-left: 316px;
+  margin-right: auto;
+  border: solid black;
+  box-sizing: border-box;
+
+}
+
+.number-of-days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 55px;
+  margin-right: 63px;
+  background: rgba(234, 255, 45, 0.2);
+
+}
+
+
+.date-info {
+  width: 325px;
+  height: 22px;
+  margin-top: 30px;
+
+}
+
+.number-of-tourists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 55px;
+  padding-right: 64px;
+}
+
+button {
+  height: 58px;
+  width: 350px;
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-bottom: 55px;
+  margin-top: 55px;
+
+}
+
+.main-footer .container {
+  margin-top: 78px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0;
+  background-color: #e0e0e0;
+  height: 120px;
+}
+
+.hashtag-visitsedona {
+  font-size: 21px;
+  line-height: 26px;
+  padding-top: 51px;
+  color: #000000;
+}
+
+.footer-social {
+  width: 150px;
+  text-align: center;
+}
+
+.footer-social ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  width: 150px;
+  list-style: none;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: #90b2d0;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #799cbd;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #ffffff;
+}
+
+
+.footer-copyright {
+  display: flex;
+  height: 41px;
+  margin-bottom: 40px;
+}
+
+.footer-copyright b {
+  display: block;
+  margin: auto;
+}
