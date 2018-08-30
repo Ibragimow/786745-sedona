@@ -1,7 +1,12 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 1200px;
+  height: 100%;
   font-family: 'PT Sans', sans-serif;
   font-size: 10px;
   line-height: 21px;
@@ -20,41 +25,84 @@ a {
   color: #000000;
   font-weight: 700;
   background-color: #ffffff;
-}
-
-.site-navigation {
   display: flex;
   flex-direction: row;
   list-style: none;
   justify-content: space-between;
+  padding-right: 73px;
+  padding-left: 73px;
+  padding-top: 15px;
+  margin: 0;
+
 }
+
+
+.header-point:hover,
+.header-point:focus {
+  color: #90b1d0;
+}
+
+.main-header {
+  height: 56px;
+
+}
+
+
+.main-header-logo {
+  position: absolute;
+  left: 530px;
+  margin-top: 0;
+
+}
+
+.logo {
+  margin-bottom: 7px;
+}
+
+
+
+
+/*
 
 .site-navigation li:first-child a,
 .site-navigation li:nth-child(2) a {
   text-align: left;
-  color: green;
-}
-
-.site-navigation li:nth-child(3) a,
-.site-navigation li:last-child a {
-  text-align: right;
-  color: black;
 }
 
 
-.site-navigation a {
-  color: #000000;
-}
 
-.site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
-  color: #90b1d0;
+*/
+
+/*
+.site-navigation .header-point:first-child {
+
+text-align: left;
+margin-left: 0;
+padding-left: 73px;
+text-align: left;
 }
+*/
+
 
 .welcome-text {
 text-align: center;
+margin-bottom: 28px;
+}
+
+.welcome-background {
+text-align: center;
+}
+
+.town-feature-item {
+
+  margin-top: 60px;
+      margin-bottom: 60px;
+}
+
+.town-feature-item p {
+
+padding-top: 7px;
+padding-left: 54px;
 }
 
 .sedona-is h2 {
@@ -63,6 +111,9 @@ text-align: center;
   font-weight: 700;
   color: #000000;
   text-align: center;
+  margin-top: 24px;
+  margin-bottom: 29px;
+
 }
 
 .sedona-is p {
@@ -70,6 +121,8 @@ text-align: center;
   line-height: 26px;
   color: #000000;
   text-align: center;
+  margin-bottom: 50px;
+
 }
 
 .feature-big {
@@ -79,7 +132,9 @@ text-align: center;
   flex-direction: row;
   list-style: none;
   box-sizing: border-box;
+
   }
+
 
 .feature-big .feature-text {
   min-width: 400px;
@@ -89,33 +144,38 @@ text-align: center;
   text-align: center;
   align-content: space-between;
   box-sizing: border-box;
-  padding-left: 60px;
-  padding-right: 60px;
 
 }
 
-.feature-big .feature-text h2 {
+.feature-text h2 {
   list-style: none;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 21px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 50px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 30px;
   font-style: normal;
   font-weight: bold;
   text-align: center;
 }
 
-
-.feature-big .feature-text p {
-    font-size: 14px;
-    line-height: 21px;
-}
-
-.feature-big .feature-text h3 {
+.feature-text h3 {
   font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 10px;
   text-decoration: none;
   font-weight: normal;
+
+
+}
+
+.feature-text p {
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 48px;
+  padding-right: 45px;
+  padding-top: 0px;
+
 }
 
 
@@ -126,7 +186,12 @@ text-align: center;
   line-height: 0;
 }
 
-.town-attractors {
+.feature {
+  padding-top: 0px;
+  width: 400px;
+}
+
+.feature-one {
   display: flex;
   flex-direction: row;
   align-content: space-between;
@@ -134,22 +199,39 @@ text-align: center;
   min-width: 1200px;
   min-height: 330px;
   list-style: none;
+  margin-bottom: 0;
+
+}
+
+.visually-hidden {
+
+  visibility: hidden;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
 }
 
 .town-attractors .logo {
-  padding-top: 60px;
   width: 75px;
   height: 72px;
+
 }
 
 .town-feature-item {
-  min-width: 400px;
-  min-height: 330px;
+  display: block;
+  width: 400px;
   text-align: center;
-  align-content: space-between;
   box-sizing: border-box;
-
 }
+
 
 .town-feature-item h2 {
 font-size: 21px;
@@ -162,18 +244,18 @@ font-size: 14px;
 line-height: 21px;
 padding-left: 60px;
 padding-right: 55px;
-padding-bottom: 88px;
-
 }
+
 
 .features {
   margin: 0;
   padding: 0;
+  margin-bottom: 92px;
   list-style: none;
-  min-height: 256px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 
 .features .feature h2 {
@@ -182,7 +264,7 @@ padding-bottom: 88px;
   text-align: center;
   padding-left: 140px;
   padding-right: 140px;
-  padding-top: 50px;
+  padding-top: 29px;
 }
 
 .features .feature h3 {
@@ -191,6 +273,7 @@ padding-bottom: 88px;
   text-decoration: none;
   font-weight: normal;
   text-align: center;
+  padding-top: 8px;
 }
 
 .features .feature p {
@@ -198,41 +281,77 @@ padding-bottom: 88px;
   line-height: 21px;
   padding-left: 63px;
   padding-right: 63px;
-  padding-bottom: 88px;
+  padding-top: 7px;
   text-align: center;
+  justify-content: space-around;
 }
 
 .are-you-interested {
-  font-size: 24px;
-  line-height: 26px;
+  font-size: 30px;
+  line-height: 30px;
   font-weight: 700;
   color: #000000;
   text-align: center;
+  margin-bottom: 20px;
+  padding-top: 7px;
 }
+
 
 .accommodation-title p:not(.are-you-interested) {
   font-size: 14px;
+  line-height: 24px;
   text-align: center;
+  padding-top: 7px;
+  margin-bottom: 44px;
+
 }
 
 .accommodation-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   width: 568px;
-  height: 395px;
-  margin-left: 316px;
-  margin-right: auto;
-  border: solid black;
+  height: 396px;
   box-sizing: border-box;
+  box-shadow: 0 0 1 px grey;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  text-align: center;
+
+  }
+
+.accommodation-form {
+  position: absolute;
+  top: 2166px;
+  left: 315px;
+  padding-left: 55px;
+  padding-right: 55px;
 
 }
 
+.form-container {
+
+  width: 457px;
+  height: 340px;
+}
+
+.accommodation-form .date-in {
+margin-top: 63px;
+}
+
+
+input .date-info {
+  font-weight: 700;
+  line-height: 21px;
+
+}
+
+.date-label {
+  width: 100%;
+}
+
 .number-of-days {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-left: 55px;
   margin-right: 63px;
   background: rgba(234, 255, 45, 0.2);
@@ -240,61 +359,115 @@ padding-bottom: 88px;
 }
 
 
+.number-of-tourists {
+text-align: left;
+}
+
+.number-of-tourists .tourists {
+  box-sizing: border-box;
+  width: 109px;
+  border: 0;
+}
+
+
+
 .date-info {
   width: 325px;
   height: 22px;
-  margin-top: 30px;
+  margin-bottom: 46px;
+  margin-right: 25px;
+  border: 0;
 
 }
+
+
+
+.date-label {
+
+
+}
+
 
 .number-of-tourists {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 55px;
-  padding-right: 64px;
+  display: inline-block;
+vertical-align: middle;
 }
 
-button {
-  height: 58px;
-  width: 350px;
-  margin-left: 55px;
-  margin-right: 55px;
-  margin-bottom: 55px;
-  margin-top: 55px;
 
+.accommodation-button {
+  height: 58px;
+  width: 100%;
+  margin-top: 65px;
+  border: 1px;
+  border-color: #97b7d3;
+  background-color: #90b2d0;
+  font-size: 21px;
+  color: #ffffff;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.accommodation {
+  text-align: center;
+}
+
+
+.hotel-search {
+  width: 568px;
+  height: 86px;
+  text-align: center;
+  background-color: #706358;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  color: #ffffff;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 36px;
+  background-color: #e0e0e0;
+  height: 120px;
+  z-index: 1
 }
 
 .main-footer .container {
-  margin-top: 78px;
   display: flex;
-  flex-direction: row;
-  padding: 0 0;
-  background-color: #e0e0e0;
-  height: 120px;
 }
 
 .hashtag-visitsedona {
   font-size: 21px;
   line-height: 26px;
-  padding-top: 51px;
   color: #000000;
+  min-height: 100px;
+  margin-right: 0;
+  width: 400px;
+  padding: auto 0;
+
 }
 
 .footer-social {
   width: 150px;
+  min-height: 100px;
   text-align: center;
+  align-items: center;
+  margin: 0;
+  width: 400px;
+
 }
 
 .footer-social ul {
   display: flex;
+  width: 150px;
   list-style: none;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  width: 150px;
-  list-style: none;
+  align-items: center;
 }
 
 .social-button {
@@ -316,14 +489,16 @@ button {
   fill: #ffffff;
 }
 
-
 .footer-copyright {
   display: flex;
   height: 41px;
-  margin-bottom: 40px;
+  margin-left: auto;
+  align-items: right;
+  min-height: 100px;
+  width: 400px;
 }
 
 .footer-copyright b {
-  display: block;
-  margin: auto;
+  padding: 56px 8px 56px 0;
+
 }
