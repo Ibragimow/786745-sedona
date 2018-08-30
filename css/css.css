@@ -405,6 +405,17 @@ vertical-align: middle;
   color: #ffffff;
 text-transform: uppercase;
 font-weight: bold;
+cursor: pointer;
+}
+
+.accommodation-button:hover,
+.accommodation-button:focus
+ {
+  background-color: #799cbd;
+}
+
+.accommodation-button:active {
+  background-color: #6c94ba;
 }
 
 .accommodation {
@@ -423,6 +434,19 @@ font-weight: bold;
   font-weight: bold;
   border: 0;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.hotel-search:hover,
+.hotel-search:focus
+ {
+  background-color: #5c4f45;
+
+}
+
+.hotel-search:active {
+  background-color: #4d4036;
+  cursor: pointer;
 }
 
 .main-footer {
@@ -446,6 +470,7 @@ font-weight: bold;
   margin-right: 0;
   width: 400px;
   padding: auto 0;
+  cursor: pointer;
 
 }
 
@@ -482,6 +507,7 @@ font-weight: bold;
 .social-button:hover,
 .social-button:focus {
   background-color: #799cbd;
+  cursor: pointer;
 }
 
 .social-button:hover path,
