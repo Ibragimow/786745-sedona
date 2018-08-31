@@ -13,9 +13,12 @@
         <a class="main-header-logo" href="index.html">
           <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
         </a>
-        <ul class="site-navigation">
+        <ul class="site-navigation navigation-left">
           <li><a class="header-point" href="#">Информация</a></li>
           <li><a class="header-point" href="#">Фото и видео</a></li>
+        </ul>
+
+        <ul class="site-navigation navigation-right">
           <li><a class="header-point" href="#">Карта штата</a></li>
           <li><a class="header-point" href="catalogue.html">Гостиницы</a></li>
         </ul>
@@ -98,36 +101,45 @@
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       </div>
       <div class="accommodation">
-        <input type="button" class="hotel-search" value="Поиск гостиницы в Седоне"></input>
+        <input type="button" class="hotel-search" value="Поиск гостиницы в Седоне" onClick="showAccommodationForm()"></input>
       </div>
       <div class="location">
         <img class="map" src="img/map.jpg" alt="Фрагмент карты">
-      </div>
-      <div class="booking-info">
-        <h2 class="visually-hidden">Даты и гости</h2>
-            <form class="accommodation-form" method="post" action="https://echo.htmlacademy.ru">
-                  <div class="date-in">
-                    <label for="checkin-date" class="date-label">Дата заезда:</label>
-                    <input type="date" class="date-info" name="checkin-date" id="checkin-date" value="2017-04-24">
+
+        <div class="accommodation-form-wrapper">
+        <form id="accommodationForm" class="accommodation-form hidden" method="post" action="https://echo.htmlacademy.ru">
+                  <div class="form-container with-icon">
+                    <label for="checkin-date">Дата заезда:</label>
+                    <input type="date" name="checkin-date" id="checkin-date" value="2017-04-24">
+                    <div class="form-icon"></div>
                   </div>
-                  <div class="date-out">
-                    <label for="checkout-date" class="date-label">Дата выезда:</label>
-                    <input type="date" class="date-info" name="checkout-date" id="checkout-date" value="2017-07-07"><br>
+                  <div class="form-container">
+                    <label for="checkout-date">Дата выезда:</label>
+                    <input type="date" name="checkout-date" id="checkout-date" value="2017-07-07"><br>
                   </div>
                   <div class="number-of-tourists">
-                    <label for="adults">Взрослые:</label>
-                    <input type="number" class="tourists" name="tourists" id="adults" value="2">
-                    <label for="kids">Дети:</label>
-                    <input type="number" class="tourists" name="tourists" id="kids" value="0"><br>
+                    <div class="form-container">
+                      <label for="adults">Взрослые:</label>
+                      <input type="number" name="tourists" id="adults" value="2">
+                    </div>
+                    <div class="form-container">
+                      <label class="label-center" for="kids">Дети:</label>
+                      <input type="number" name="tourists" id="kids" value="0"><br>
+                    </div>
                   </div>
                   <button type="submit" class="accommodation-button">Найти</button>
                 </form>
-            </div>
+        </div>
+      </div>
+      <div class="booking-info">
+        <h2 class="visually-hidden">Даты и гости</h2>
+      </div>
     </main>
     <footer class="main-footer">
-      <div class="container">
-      <a href="#" class="hashtag-visitsedona">#visitsedona</a>
-      <div class="footer-social">
+      <div class="footer-section">
+	      <a href="#" class="hashtag-visitsedona">#visitsedona</a>
+	  </div>
+      <div class="footer-section footer-social">
         <ul>
         <li><a class="social-button" href="#" id="twitter"><span class="visually-hidden">Ссылка на Twitter</span>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -161,10 +173,18 @@
           </svg>
         </a></li>
       </div>
-      <p class="footer-copyright">
-        <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy_logo_name.svg" width="200px" alt="Лого Академии"></a>
-      </p>
-    </div>
-      </footer>
+      <div class="footer-section">
+	      <p class="footer-copyright">
+	        <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy_logo_name.svg" alt="Лого Академии"></a>
+	      </p>
+	  </div>
+    </footer>
+
+    <script>
+      function showAccommodationForm() {
+        var form = document.getElementById('accommodationForm');
+        form.classList.toggle('hidden');
+      }
+    </script>
   </body>
 </html>
