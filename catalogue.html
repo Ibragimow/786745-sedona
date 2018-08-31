@@ -3,18 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Выбор отеля</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
-        <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
+          <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
         </a>
-        <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="catalogue.html">Гостиницы</a></li>
+        <ul class="site-navigation navigation-left">
+          <li><a class="header-point" href="#">Информация</a></li>
+          <li><a class="header-point" href="#">Фото и видео</a></li>
+        </ul>
+        <ul class="site-navigation navigation-right">
+          <li><a class="header-point" href="#">Карта штата</a></li>
+          <li><a class="header-point" href="catalogue.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -22,6 +27,8 @@
       <section class="hotel-choosing">
         <h1 class="visually-hidden">Выбор отеля</h1>
         <img class="background-blur" src="img/background-blur.jpg" alt="Фон выбора гостиницы">
+
+        <div class="choose-your-hotel">
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Инфраструктура:</legend>
@@ -41,6 +48,7 @@
             </ul>
           </fieldset>
           <fieldset>
+          </div>
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter-option">
@@ -72,9 +80,9 @@
           <button type="submit" class="filter-button button">Показать</button>
         </form>
       </section>
-      <section class="catalog">
-        <div>
-          <h2 class="visually-hidden">Найденные гостиницы</h2>
+      <h2 class="visually-hidden">Найденные гостиницы</h2>
+      <div class="catalog">
+        <div class="searching-results">
           <h3>Найдено:3</h3>
           <h4>Сортировка</h4>
           <a href="#" class="hotels-order" id="by-price">По цене</a>
@@ -83,7 +91,8 @@
           <a href="#" class="order" id="hotels-order-up"><img src="img/icon-up-dir" alt="Сортировка по возрастанию"></a>
           <a href="#" class="order" id="hotels-order-down"><img src="img/icon-down-dir" alt="Сортировка по убыванию"></a>
         </div>
-        <ul class="catalog-list">
+        <div class="hotels-list">
+          <ul class="catalog-list">
           <li class="catalog-item">
             <h3>AMARA RESORT & SPA</h3>
             <a href="#" class="hotel-link" id="amara-hotel"><img src="img/amara-resort-and-spa.jpg" alt="Amara hotel"></a>
@@ -127,7 +136,8 @@
             <span class="rating">Рейтинг: 9,2</span>
           </li>
         </ul>
-      </section>
+      </div>
+      </div>
     </main>
     <footer class="main-footer">
       <a href="#" class="hashtag-visitsedona">#visitsedona</a>

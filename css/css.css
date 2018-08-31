@@ -567,3 +567,43 @@ cursor: pointer;
   height: 100%;
   width: auto;
 }
+
+/* Далее страница выбора отелей */
+
+.inner-page {
+
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 100px;
+  }
+
+
+.catalog h3 {
+  font-size: 21px;
+  line-height: 26px;
+  color: green;
+}
+ .catalog .searching-results {
+   display: flex;
+   flex-direction: row;
+ }
+
+ .hotels-list {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ .hotels-list .catalog-list {
+
+ }
+
+ .catalog-list .catalog-item {
+   display: flex;
+   flex-direction: row;
+
+ }
