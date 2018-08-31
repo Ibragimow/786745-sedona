@@ -71,7 +71,6 @@ a {
 
 }
 
-
 .main-header-logo {
   position: absolute;
   left: calc(50% - 70px);
@@ -82,30 +81,6 @@ a {
 .logo {
   margin-bottom: 7px;
 }
-
-
-
-
-/*
-
-.site-navigation li:first-child a,
-.site-navigation li:nth-child(2) a {
-  text-align: left;
-}
-
-
-
-*/
-
-/*
-.site-navigation .header-point:first-child {
-
-text-align: left;
-margin-left: 0;
-padding-left: 73px;
-text-align: left;
-}
-*/
 
 
 .welcome-text {
@@ -151,7 +126,7 @@ padding-left: 54px;
   list-style: none;
   box-sizing: border-box;
 
-  }
+    }
 
 
 .feature-big .feature-text {
