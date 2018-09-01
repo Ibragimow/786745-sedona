@@ -576,14 +576,12 @@ cursor: pointer;
   padding: 0;
   max-width: 1200px;
   height: 100%;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 10px;
   line-height: 21px;
   color: #000000;
   text-transform: uppercase;
   background-color: #ffffff;
-  background-position: top center;
-  background-repeat: no-repeat;
 
 }
 
@@ -595,15 +593,13 @@ cursor: pointer;
   }
 
 
-.catalog h3 {
-  font-size: 21px;
-  line-height: 26px;
-  color: green;
-}
- .catalog .searching-results {
-   display: flex;
-   flex-direction: row;
+
+ .inner-page h3 {
+   color: black;
+   font-size: 21px;
+   line-height: 26px;
  }
+
 
  .hotels-list {
    display: flex;
@@ -622,13 +618,150 @@ cursor: pointer;
  }
 
  .hotel-choosing {
+
    width: 100%;
    height: auto;
-background-image: url("img/devil-bridge.jpg");
-background-position: top center;
-background-repeat: no-repeat;
+   background-position: top center;
+   background-repeat: no-repeat;
+
+
  }
 
-.choose-your-hotel {
+.hotel-choosing-wrapper {
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url("img/back-cut.jpg");
+  width: auto;
+  height: 217px;
+  background-color: black;
+  padding: 32px 72px;
+
+
+}
+
+
+.hotel-choosing-wrapper ul {
+  list-style: none;
+}
+
+.filter-option {
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  background: rgba(0, 128, 0, 0.2);
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+
+.filter-input-checkbox {
+  color: white;
+
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 2px solid white;
+  left: -42px;
+  top: 0;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 6px;
+  left: -37px;
+  background-image: url("img/checkbox-on2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  color: white;
+}
+
+
+.hotel-choosing-wrapper legend {
+  color: white;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+
+}
+
+.hotel-choosing fieldset {
+  list-style: 0;
+  border: 0;
+}
+
+.filter-range {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.hotel-choosing-wrapper .comforts {
+  padding-left: 0;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-grow: 1;
+  width: 25%;
+
+}
+
+.infrastructure-and-type {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 0 0;
+}
+
+
+.day-cost {
+  display: flex;
+  flex-grow: 1;
+
+}
+
+.catalog h3 {
+  font-size: 21px;
+  line-height: 26px;
+  color: black;
+}
+
+ .catalog .searching-results {
+   display: flex;
+   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 72px;
+
+ }
+
+.how-to-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Выбор отеля</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/css.css" rel="stylesheet">
   </head>
@@ -26,11 +27,12 @@
     <main class="container">
       <div class="hotel-choosing">
         <h1 class="visually-hidden">Выбор отеля</h1>
-        <div class="choose-your-hotel">
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <form class="filter" method="post" action="https://echo.htmlacademy.ru">
+          <div class="hotel-choosing-wrapper">
           <fieldset>
+            <div class="infrastructure-and-type">
             <legend>Инфраструктура:</legend>
-            <ul>
+            <ul class="comforts">
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Swimming-pool" id="swimming-pool" checked>
                 <label for="swimming-pool">Бассейн</label>
@@ -44,11 +46,12 @@
                 <label for="wi-fi">WI-FI</label>
               </li>
             </ul>
+          </div>
           </fieldset>
           <fieldset>
-          </div>
-            <legend>Тип жилья:</legend>
-            <ul>
+            <div class="infrastructure-and-type">
+          <legend>Тип жилья:</legend>
+            <ul class="comforts">
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Guesthouse" id="guesthouse" checked>
                 <label for="guesthouse">Гостиница</label>
@@ -62,8 +65,12 @@
                 <label for="apartments">Апартаменты</label>
               </li>
             </ul>
+            </div>
           </fieldset>
-          <fieldset>
+
+        <fieldset>
+
+          <div class="day-cost">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="accommodation-cost">
               <section class="visually-hidden cost-range">
@@ -74,20 +81,24 @@
               </section>
             </div>
             <input type="range" name="cost-of-living" id="cost-of-living" step="1000" min="0" max="4000" value="3000">
-          </fieldset>
           <button type="submit" class="filter-button button">Показать</button>
+          </div>
+          </fieldset>
         </form>
       </div>
+
       <h2 class="visually-hidden">Найденные гостиницы</h2>
       <div class="catalog">
         <div class="searching-results">
           <h3>Найдено:3</h3>
           <h4>Сортировка</h4>
+          <div class="how-to-sort">
           <a href="#" class="hotels-order" id="by-price">По цене</a>
           <a href="#" class="hotels-order" id="by-type">По типу</a>
           <a href="#" class="hotels-order" id="by-rating">По рейтингу</a>
           <a href="#" class="order" id="hotels-order-up"><img src="img/icon-up-dir" alt="Сортировка по возрастанию"></a>
           <a href="#" class="order" id="hotels-order-down"><img src="img/icon-down-dir" alt="Сортировка по убыванию"></a>
+        </div>
         </div>
         <div class="hotels-list">
           <ul class="catalog-list">
@@ -138,15 +149,48 @@
       </div>
     </main>
     <footer class="main-footer">
-      <a href="#" class="hashtag-visitsedona">#visitsedona</a>
-      <div class="footer-social">
-        <a class="social-button" href="#" id="twitter"><img src="img/twitter-button.svg" alt="Ссылка на Twitter"></a>
-        <a class="social-button" href="#" id="facebook"><img src="img/facebook-button.svg" alt="Ссылка на Facebook"></a>
-        <a class="social-button" href="#" id="youtube"><img src="img/youtube-button.svg" alt="Ссылка на Youtube"></a>
+      <div class="footer-section">
+        <a href="#" class="hashtag-visitsedona">#visitsedona</a>
+    </div>
+      <div class="footer-section footer-social">
+        <ul>
+        <li><a class="social-button" href="#" id="twitter"><span class="visually-hidden">Ссылка на Twitter</span>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
+          <image overflow="visible" width="17" height="15" xlink:href="t.png" >
+          </image>
+          <g id="W6EeEF_1_">
+            <g>
+              <path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
+                c-0.004,0.861-0.522,1.513-0.857,1.768c0.685,0.17,1.304-0.491,1.304-0.491c-0.169,1-1.006,1.788-1.563,2.024
+                c-0.231,6.75-3.175,11.217-10.077,11.082c-0.522,0,0.075,0-0.446,0c-0.41,0-4.164-0.46-4.898-1.887
+                c2.271,0.196,3.893-0.422,4.693-1.177c-0.96-0.3-2.679-0.477-2.979-2.95C2.064,9.09,2.279,9.212,2.905,9.103
+                C1.705,8.247,0.374,7.53,0.448,5.33c0.285,0.328,1.067,0.536,1.34,0.472c-0.703-0.241-1.97-3.36-0.894-4.952
+                c1.818,1.854,3.735,3.606,7.152,3.773C8.254,2.33,9.183,0.793,10.95,0.144z"/>
+            </g>
+          </g>
+          </svg></a></li>
+        <li><a class="social-button" href="#" id="facebook"><span class="visually-hidden">Ссылка на Facebook</span>
+          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
+          <path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
+          </svg>
+        </a></li>
+        <li><a class="social-button" href="#" id="youtube"><span class="visually-hidden">Ссылка на Youtube</span>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
+          <image overflow="visible" enable-background="new    " width="20" height="16" xlink:href="youtube.png" >
+          </image>
+          <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
+             M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
+          </svg>
+        </a></li>
       </div>
-      <p class="copyright">
-        <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy_logo_name.svg" alt="Лого Академии"></a>
-      </p>
+      <div class="footer-section">
+        <p class="footer-copyright">
+          <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy_logo_name.svg" alt="Лого Академии"></a>
+        </p>
+    </div>
     </footer>
   </body>
 </html>
