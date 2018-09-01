@@ -571,6 +571,19 @@ cursor: pointer;
 /* Далее страница выбора отелей */
 
 .inner-page {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  height: 100%;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 10px;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  background-position: top center;
+  background-repeat: no-repeat;
 
 }
 
@@ -607,3 +620,15 @@ cursor: pointer;
    flex-direction: row;
 
  }
+
+ .hotel-choosing {
+   width: 100%;
+   height: auto;
+background-image: url("img/devil-bridge.jpg");
+background-position: top center;
+background-repeat: no-repeat;
+ }
+
+.choose-your-hotel {
+
+}
