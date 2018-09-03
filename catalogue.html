@@ -68,7 +68,7 @@
             </div>
           </fieldset>
 
-        <fieldset>
+        <fieldset class="cost-fields">
 
           <div class="day-cost">
             <legend>Стоимость в сутки (Р):</legend>
@@ -90,32 +90,55 @@
       <h2 class="visually-hidden">Найденные гостиницы</h2>
       <div class="catalog">
         <div class="searching-results">
-          <h3>Найдено:3</h3>
-          <h4>Сортировка</h4>
-          <div class="how-to-sort">
-          <a href="#" class="hotels-order" id="by-price">По цене</a>
-          <a href="#" class="hotels-order" id="by-type">По типу</a>
-          <a href="#" class="hotels-order" id="by-rating">По рейтингу</a>
-          <a href="#" class="order" id="hotels-order-up"><img src="img/icon-up-dir" alt="Сортировка по возрастанию"></a>
-          <a href="#" class="order" id="hotels-order-down"><img src="img/icon-down-dir" alt="Сортировка по убыванию"></a>
-        </div>
+          <div class="searching-results-title">
+            <h3>Найдено:3</h3>
+            
+            <div class="how-to-sort">
+              <h4>Сортировка</h4>
+              <a href="#" class="hotels-order active" id="by-price">По цене</a>
+              <a href="#" class="hotels-order" id="by-type">По типу</a>
+              <a href="#" class="hotels-order" id="by-rating">По рейтингу</a>
+            </div>
+          </div>
+
+          <div class="searching-results-arrows">
+            <a href="#" class="order" id="hotels-order-up"><img src="img/icon-up-off.svg" alt="Сортировка по возрастанию"></a>
+            <a href="#" class="order" id="hotels-order-down"><img src="img/icon-down-on.svg" alt="Сортировка по убыванию"></a>
+          </div>
         </div>
         <div class="hotels-list">
           <ul class="catalog-list">
           <li class="catalog-item">
-            <h3>AMARA RESORT & SPA</h3>
-            <a href="#" class="hotel-link" id="amara-hotel"><img src="img/amara-resort-and-spa.jpg" alt="Amara hotel"></a>
-            <div class="rating-stars">
-              <img src="img/star-rating.svg" alt="Звезда рейтинга">
-              <img src="img/star-rating.svg" alt="Звезда рейтинга">
-              <img src="img/star-rating.svg" alt="Звезда рейтинга">
-              <img src="img/star-rating.svg" alt="Звезда рейтинга">
+            <div class="catalog-item-left">
+              <a href="#" class="hotel-link" id="amara-hotel">
+                <img src="img/amara-resort-and-spa.jpg" alt="Amara hotel">
+              </a>
+
+              <div class="catalog-item-info">
+                <h3>AMARA RESORT & SPA</h3>
+                <div class="catalog-item-info-extra">
+                  <div>
+                    <span>Гостиница</span>
+                    <a class="button button-more" href="#">Подробнее</a>
+                  </div>
+                  <div>
+                    <span>от 4000 р.</span>
+                    <a class="button button-book" href="#">Забронировать</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="hotel-type">Гостиница</span>
-            <span class="hotel-price">от 4000 р.</span>
-            <a class="button-more" href="#">Подробнее</a>
-            <a class="button-book" href="#">Забронировать</a>
-            <span class="rating">Рейтинг: 8,5</span>
+
+            <div class="catalog-item-right">
+              <div class="rating-stars">
+                <img src="img/star-rating.svg" alt="Звезда рейтинга">
+                <img src="img/star-rating.svg" alt="Звезда рейтинга">
+                <img src="img/star-rating.svg" alt="Звезда рейтинга">
+                <img src="img/star-rating.svg" alt="Звезда рейтинга">
+              </div>
+
+              <span class="rating">Рейтинг: 8,5</span>
+            </div>            
           </li>
           <li class="catalog-item">
             <h3>DESERT QUAIL INN</h3>
