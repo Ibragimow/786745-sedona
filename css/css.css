@@ -538,7 +538,13 @@ cursor: pointer;
   background-color: rgba(255,255,255,.8);
   height: 120px;
   z-index: 1;
-  padding: 33px 0px;
+  padding: 0;
+}
+
+.inner-page .main-footer {
+  position: relative;
+  height: 120px;
+  padding-bottom: 20px;
 }
 
 .footer-section {
@@ -666,11 +672,6 @@ background-image: url(../img/academy-logo-active3.png);
    line-height: 26px;
  }
 
-
- .hotels-list {
-
- }
-
  .hotels-list .catalog-list {
   list-style: none;
   padding: 0;
@@ -686,12 +687,8 @@ background-image: url(../img/academy-logo-active3.png);
    padding: 12px 70px;
    padding-top: 28px;
    border-bottom: 1px solid #e5e5e5;
-   border-top: 1px solid #e5e5e5;
+
  }
-
- .catalog-list .catalog-item:first-child {
-   }
-
  .catalog-item-left {
   display: flex;
   align-items: stretch;
@@ -1150,10 +1147,4 @@ top: 168.3px;
   font-size: 14px;
 padding-bottom: 18px;
 padding-right: 15px;
-}
-
-.catalog-list .catalog-item:last-child {
-
-  border-bottom: 1px solid gray;
-
 }
