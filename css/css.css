@@ -1,5 +1,9 @@
-*, *::after, *::before {
+<!DOCTYPE html> *, *::after, *::before {
   box-sizing: border-box;
+}
+
+head {
+
 }
 
 body {

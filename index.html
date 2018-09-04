@@ -11,7 +11,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
-          <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
+        <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
         </a>
         <ul class="site-navigation navigation-left">
           <li><a class="header-point" href="#">Информация</a></li>
@@ -30,12 +30,13 @@
       <section class="sedona-is">
         <h1 class="visually-hidden">Отдых в Седоне</h1>
         <h2>Седона &mdash; небольшой городок в Аризоне,<br>
-        заслуживающий большего!</h2>
+          заслуживающий большего!
+        </h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
       <h2 class="visually-hidden">Первая причина</h2>
       <div class="feature-big">
-          <section class="feature-text">
+        <section class="feature-text">
           <h2>Настоящий городок</h2>
           <h3>&mdash; №1 &mdash;</h3>
           <p>Седона &mdash; не аттракцион для туристов, Там течет своя жизнь</p>
@@ -44,30 +45,29 @@
           <img class="background-image" src="img/true-town.jpg" alt="Настоящий городок">
         </section>
       </div>
-
       <div class="town-attractors">
         <h2 class="visually-hidden">Преимущества "настоящего городка"</h2>
         <div class="feature-one">
-        <div class="town-feature-item">
-          <img class="logo" src="img/residential.svg" alt="Жильё">
-          <h2>Жильё</h2>
-          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-        </div>
-        <div class="town-feature-item">
-          <img class="logo" src="img/food.svg" alt="Еда">
-          <h2>Еда</h2>
-          <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
-        </div>
-        <div class="town-feature-item">
-          <img class="logo" src="img/gifts.svg" alt="Сувениры">
-          <h2>Сувениры</h2>
-          <p>Не только китайского, но и местного производства!</p>
+          <div class="town-feature-item">
+            <img class="logo" src="img/residential.svg" alt="Жильё">
+            <h2>Жильё</h2>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </div>
+          <div class="town-feature-item">
+            <img class="logo" src="img/food.svg" alt="Еда">
+            <h2>Еда</h2>
+            <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+          </div>
+          <div class="town-feature-item">
+            <img class="logo" src="img/gifts.svg" alt="Сувениры">
+            <h2>Сувениры</h2>
+            <p>Не только китайского, но и местного производства!</p>
+          </div>
         </div>
       </div>
-    </div>
-    <h2 class="visually-hidden">Вторая причина</h2>
+      <h2 class="visually-hidden">Вторая причина</h2>
       <div class="feature-big">
-          <section class="feature-pic">
+        <section class="feature-pic">
           <img class="background-image" src="img/devil-bridge.jpg" alt="Мост Дьявола">
         </section>
         <section class="feature-text">
@@ -78,7 +78,7 @@
       </div>
       <h2 class="visually-hidden">Остальные причины</h2>
       <div class="features">
-          <section class="feature">
+        <section class="feature">
           <h2>Небольшая <br> площадь</h2>
           <h3>&mdash; №3 &mdash;</h3>
           <p>Все достопримечательности находятся очень близко</p>
@@ -101,78 +101,87 @@
       </div>
       <div class="accommodation">
         <div class="accommodation-dropdown">
-        <input type="button" class="hotel-search" value="Поиск гостиницы в Седоне" onClick="showAccommodationForm()">
+          <input type="button" class="hotel-search" value="Поиск гостиницы в Седоне" onClick="showAccommodationForm()">
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d456782.37276431173!2d-111.917166628837!3d34.895653592963384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1536065518340" width="1200" height="600" style="border:0" allowfullscreen></iframe>
+        <div class="location">
+          <form id="accommodationForm" class="accommodation-form hidden" method="post" action="https://echo.htmlacademy.ru">
+            <div class="form-container with-icon">
+              <label for="checkin-date">Дата заезда:</label>
+              <input type="date" name="checkin-date" id="checkin-date" value="2017-04-24">
+              <div class="form-icon"></div>
+            </div>
+            <div class="form-container with-icon">
+              <label for="checkout-date">Дата выезда:</label>
+              <input type="date" name="checkout-date" id="checkout-date" value="2017-07-07">
+              <div class="form-icon"></div>
+            </div>
+            <div class="number-of-tourists">
+              <div class="form-container">
+                <label for="adults">Взрослые:</label>
+                <input type="number" name="tourists" id="adults" value="2">
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d456782.37276431173!2d-111.917166628837!3d34.895653592963384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1536065518340" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <div class="location">
-        <form id="accommodationForm" class="accommodation-form hidden" method="post" action="https://echo.htmlacademy.ru">
-                  <div class="form-container with-icon">
-                    <label for="checkin-date">Дата заезда:</label>
-                    <input type="date" name="checkin-date" id="checkin-date" value="2017-04-24">
-                    <div class="form-icon"></div>
-                  </div>
-                  <div class="form-container with-icon">
-                    <label for="checkout-date">Дата выезда:</label>
-                    <input type="date" name="checkout-date" id="checkout-date" value="2017-07-07">
-                    <div class="form-icon"></div>
-                  </div>
-                  <div class="number-of-tourists">
-                    <div class="form-container">
-                      <label for="adults">Взрослые:</label>
-                      <input type="number" name="tourists" id="adults" value="2">
-                    </div>
-                    <div class="form-container">
-                      <label class="label-center" for="kids">Дети:</label>
-                      <input type="number" name="tourists" id="kids" value="0"><br>
-                    </div>
-                  </div>
-                  <button type="submit" class="accommodation-button">Найти</button>
-                </form>
+              <div class="form-container">
+                <label class="label-center" for="kids">Дети:</label>
+                <input type="number" name="tourists" id="kids" value="0"><br>
+              </div>
+            </div>
+            <button type="submit" class="accommodation-button">Найти</button>
+          </form>
         </div>
       </div>
-    </div>
     </main>
     <footer class="main-footer">
       <div class="footer-section">
-	      <a href="#" class="hashtag-visitsedona">#visitsedona</a>
-	  </div>
+        <a href="#" class="hashtag-visitsedona">#visitsedona</a>
+      </div>
       <div class="footer-section footer-social">
         <ul>
-        <li><a class="social-button" href="#" id="twitter"><span class="visually-hidden">Ссылка на Twitter</span>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
-            <g id="W6EeEF_1_">
-          	<g>
-          		<path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
-          			c-0.004,0.861-0.522,1.513-0.857,1.768c0.685,0.17,1.304-0.491,1.304-0.491c-0.169,1-1.006,1.788-1.563,2.024
-          			c-0.231,6.75-3.175,11.217-10.077,11.082c-0.522,0,0.075,0-0.446,0c-0.41,0-4.164-0.46-4.898-1.887
-          			c2.271,0.196,3.893-0.422,4.693-1.177c-0.96-0.3-2.679-0.477-2.979-2.95C2.064,9.09,2.279,9.212,2.905,9.103
-          			C1.705,8.247,0.374,7.53,0.448,5.33c0.285,0.328,1.067,0.536,1.34,0.472c-0.703-0.241-1.97-3.36-0.894-4.952
-          			c1.818,1.854,3.735,3.606,7.152,3.773C8.254,2.33,9.183,0.793,10.95,0.144z"/>
-          	</g>
-          </g>
-          </svg></a></li>
-        <li><a class="social-button" href="#" id="facebook"><span class="visually-hidden">Ссылка на Facebook</span>
-          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
-          <path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
-          </svg>
-        </a></li>
-        <li><a class="social-button" href="#" id="youtube"><span class="visually-hidden">Ссылка на Youtube</span>
-          <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
-                  <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
-          	 M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
-          </svg>
-        </a></li>
+          <li>
+            <a class="social-button" href="#" id="twitter">
+              <span class="visually-hidden">Ссылка на Twitter</span>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
+                <g id="W6EeEF_1_">
+                  <g>
+                    <path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
+                      c-0.004,0.861-0.522,1.513-0.857,1.768c0.685,0.17,1.304-0.491,1.304-0.491c-0.169,1-1.006,1.788-1.563,2.024
+                      c-0.231,6.75-3.175,11.217-10.077,11.082c-0.522,0,0.075,0-0.446,0c-0.41,0-4.164-0.46-4.898-1.887
+                      c2.271,0.196,3.893-0.422,4.693-1.177c-0.96-0.3-2.679-0.477-2.979-2.95C2.064,9.09,2.279,9.212,2.905,9.103
+                      C1.705,8.247,0.374,7.53,0.448,5.33c0.285,0.328,1.067,0.536,1.34,0.472c-0.703-0.241-1.97-3.36-0.894-4.952
+                      c1.818,1.854,3.735,3.606,7.152,3.773C8.254,2.33,9.183,0.793,10.95,0.144z"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#" id="facebook">
+              <span class="visually-hidden">Ссылка на Facebook</span>
+              <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
+                <path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#" id="youtube">
+              <span class="visually-hidden">Ссылка на Youtube</span>
+              <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
+                <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
+                  M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="footer-section">
-	      <p class="footer-copyright">
-	        <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy-logo-default2.png" alt="Лого Академии"></a>
-	      </p>
-	  </div>
+        <p class="footer-copyright">
+          <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy-logo-default2.png" alt="Лого Академии"></a>
+        </p>
+      </div>
     </footer>
-
     <script>
       function showAccommodationForm() {
         var form = document.getElementById('accommodationForm');
