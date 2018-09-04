@@ -1,0 +1,13 @@
+<div class="day-cost">
+  <legend>Стоимость в сутки (Р):</legend>
+  <div class="accommodation-cost">
+    <section class="visually-hidden cost-range">
+      <p>От 0</p>
+    </section>
+    <section class="visually-hidden cost-range">
+      <p>До 3000</p>
+    </section>
+  </div>
+  <input type="range" name="cost-of-living" id="cost-of-living" step="1000" min="0" max="4000" value="3000">
+<button type="submit" class="filter-button button">Показать</button>
+</div>

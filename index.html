@@ -59,7 +59,7 @@
           <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
         </div>
         <div class="town-feature-item">
-          <img class="logo" src="img/gifts.svg" width="75px" height="68px" alt="Сувениры">
+          <img class="logo" src="img/gifts.svg" alt="Сувениры">
           <h2>Сувениры</h2>
           <p>Не только китайского, но и местного производства!</p>
         </div>
@@ -71,7 +71,7 @@
           <img class="background-image" src="img/devil-bridge.jpg" alt="Мост Дьявола">
         </section>
         <section class="feature-text">
-          <h2>Там есть мост Дьявола</h2>
+          <h2>Там есть <br> мост Дьявола</h2>
           <h3>&mdash; №2 &mdash;</h3>
           <p>Да, по нему можно пройти! Если конечно Вы осмелитесь.</p>
         </section>
@@ -79,17 +79,17 @@
       <h2 class="visually-hidden">Остальные причины</h2>
       <div class="features">
           <section class="feature">
-          <h2>Небольшая площадь</h2>
+          <h2>Небольшая <br> площадь</h2>
           <h3>&mdash; №3 &mdash;</h3>
           <p>Все достопримечательности находятся очень близко</p>
         </section>
         <section class="feature">
-          <h2>Красивая дорога</h2>
+          <h2>Красивая <br> дорога</h2>
           <h3>&mdash; №4 &mdash;</h3>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </section>
         <section class="feature">
-          <h2>Мало туристов</h2>
+          <h2>Мало <br> туристов</h2>
           <h3>&mdash; №5 &mdash;</h3>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </section>
@@ -100,21 +100,21 @@
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       </div>
       <div class="accommodation">
-        <input type="button" class="hotel-search" value="Поиск гостиницы в Седоне" onClick="showAccommodationForm()"></input>
-      </div>
+        <div class="accommodation-dropdown">
+        <input type="button" class="hotel-search" value="Поиск гостиницы в Седоне" onClick="showAccommodationForm()">
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d456782.37276431173!2d-111.917166628837!3d34.895653592963384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1536065518340" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       <div class="location">
-        <img class="map" src="img/map.jpg" alt="Фрагмент карты">
-
-        <div class="accommodation-form-wrapper">
         <form id="accommodationForm" class="accommodation-form hidden" method="post" action="https://echo.htmlacademy.ru">
                   <div class="form-container with-icon">
                     <label for="checkin-date">Дата заезда:</label>
                     <input type="date" name="checkin-date" id="checkin-date" value="2017-04-24">
                     <div class="form-icon"></div>
                   </div>
-                  <div class="form-container">
+                  <div class="form-container with-icon">
                     <label for="checkout-date">Дата выезда:</label>
-                    <input type="date" name="checkout-date" id="checkout-date" value="2017-07-07"><br>
+                    <input type="date" name="checkout-date" id="checkout-date" value="2017-07-07">
+                    <div class="form-icon"></div>
                   </div>
                   <div class="number-of-tourists">
                     <div class="form-container">
@@ -130,9 +130,7 @@
                 </form>
         </div>
       </div>
-      <div class="booking-info">
-        <h2 class="visually-hidden">Даты и гости</h2>
-      </div>
+    </div>
     </main>
     <footer class="main-footer">
       <div class="footer-section">
@@ -143,9 +141,7 @@
         <li><a class="social-button" href="#" id="twitter"><span class="visually-hidden">Ссылка на Twitter</span>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
-          <image overflow="visible" width="17" height="15" xlink:href="t.png" >
-          </image>
-          <g id="W6EeEF_1_">
+            <g id="W6EeEF_1_">
           	<g>
           		<path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
           			c-0.004,0.861-0.522,1.513-0.857,1.768c0.685,0.17,1.304-0.491,1.304-0.491c-0.169,1-1.006,1.788-1.563,2.024
@@ -163,18 +159,16 @@
           </svg>
         </a></li>
         <li><a class="social-button" href="#" id="youtube"><span class="visually-hidden">Ссылка на Youtube</span>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
-          <image overflow="visible" enable-background="new    " width="20" height="16" xlink:href="youtube.png" >
-          </image>
-          <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
+                  <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
           	 M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
           </svg>
         </a></li>
       </div>
       <div class="footer-section">
 	      <p class="footer-copyright">
-	        <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy_logo_name.svg" alt="Лого Академии"></a>
+	        <b>Website by</b><a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/academy-logo-default2.png" alt="Лого Академии"></a>
 	      </p>
 	  </div>
     </footer>

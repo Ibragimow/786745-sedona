@@ -6,6 +6,7 @@ body {
   position: relative;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 0;
   max-width: 1200px;
   height: 100%;
   font-family: 'PT Sans', sans-serif;
@@ -14,6 +15,7 @@ body {
   color: #000000;
   text-transform: uppercase;
   background-color: #ffffff;
+  box-shadow: 0 0 5px 3px #dedfdf;
 }
 
 a {
@@ -49,15 +51,19 @@ a {
 
 .navigation-left {
   justify-content: flex-start;
+
 }
 
 .navigation-right {
   justify-content: flex-end;
+
 }
 
 .site-navigation li {
   text-align: center;
+
 }
+
 
 
 .header-point:hover,
@@ -129,7 +135,7 @@ padding-left: 54px;
 
 
 .feature-big .feature-text {
-  flex-grow: 1;
+  width: 400px;
   min-height: inherit;
   background-color: #90b2d0;
   color: #ffffff;
@@ -154,7 +160,7 @@ padding-left: 54px;
 .feature-text h3 {
   font-size: 14px;
   padding-top: 8px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   text-decoration: none;
   font-weight: normal;
 
@@ -172,7 +178,6 @@ padding-left: 54px;
 
 
 .feature-big .feature-pic {
-  flex-grow: 2;
   overflow: hidden;
   min-height: inherit;
   background-color: #ffffff;
@@ -243,7 +248,7 @@ padding-right: 55px;
 .features {
   margin: 0;
   padding: 0;
-  margin-bottom: 92px;
+  margin-bottom: 62px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -295,8 +300,14 @@ padding-right: 55px;
 
 }
 
-.location {
+.accommodation-dropdown {
   position: relative;
+}
+
+.location {
+  position: absolute;
+  top: 500px;
+  bottom: 300px;
   height: 600px;
   overflow: hidden;
 }
@@ -312,15 +323,16 @@ padding-right: 55px;
   left: 0;
   right: 0;
   height: 396px;
+
 }
 
 .accommodation-form {
   width: 568px;
   height: 396px;
-  padding: 63px 55px;
+  padding: 54px 55px;
   margin: 0 auto;
   box-sizing: border-box;
-  box-shadow: 0 0 1 px grey;
+box-shadow: 0 0 5px 1px gray;
   font-size: 14px;
   font-weight: bold;
   line-height: 21px;
@@ -328,7 +340,11 @@ padding-right: 55px;
   text-transform: uppercase;
   background-color: #ffffff;
   text-align: center;
-  transition: all .3s ease;
+  transition: all .2s ease;
+  position: relative;
+  z-index: 1;
+z
+
 }
 
 .accommodation-form.hidden {
@@ -344,6 +360,7 @@ padding-right: 55px;
   align-items: center;
   width: 100%;
   margin-bottom: 10px;
+  padding-bottom: 17px;
 }
 
 .form-container label {
@@ -356,15 +373,32 @@ padding-right: 55px;
   height: 40px;
   flex-grow: 1;
   flex-shrink: 1;
-  background: #d0d0d0;
   border: none;
   padding: 10px;
   font-weight: 700;
   line-height: 20px;
+
+}
+
+.form-container input:hover,
+.form-container input:focus
+ {
+  background-color: #eaeaea;
+  outline: 0;
+}
+
+.form-container input:focus {
+  border: 2px solid #e4e4e4;
+}
+
+.form-container input:active {
+  border: 2px solid #e4e4e4;
+  outline: 0;
 }
 
 .with-icon {
   position: relative;
+  padding-bottom: 17px;
 }
 
 .with-icon input {
@@ -373,19 +407,33 @@ padding-right: 55px;
 
 .form-icon {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  bottom: 5px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: blue;
+      right: 0px;
+      top: 9px;
+      bottom: 5px;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../img/calendar.jpg);
+      background-repeat: no-repeat;
+      color: grey;
 }
 
-.form-icon img {
+.form-icon:hover,
+.form-icon:focus
+ {
+  background-image: url(../img/calendar-hover.jpg);
+}
+
+.form-icon:active {
+  background-image: url(../img/calendar-active.jpg);
+}
+
+.form-icon {
   max-width: 100%;
   max-height: 100%;
+  repeat: 0;
+
 }
 
 .number-of-days {
@@ -421,9 +469,9 @@ padding-right: 55px;
 }
 
 .accommodation-button {
-  height: 58px;
-  width: 100%;
-  margin-top: 65px;
+  height: 57px;
+    width: 100%;
+    margin-top: 27px;
   border: 1px;
   border-color: #97b7d3;
   background-color: #90b2d0;
@@ -442,6 +490,7 @@ cursor: pointer;
 
 .accommodation-button:active {
   background-color: #6c94ba;
+  color: #a0b8d0;
 }
 
 .accommodation {
@@ -472,22 +521,24 @@ cursor: pointer;
 
 .hotel-search:active {
   background-color: #4d4036;
+  color: #8f8984;
   cursor: pointer;
 }
 
 .main-footer {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: rgba(255,255,255,.8);
   height: 120px;
-  z-index: 1
+  z-index: 1;
+  padding: 33px 0px;
 }
 
 .footer-section {
@@ -501,6 +552,7 @@ cursor: pointer;
 .hashtag-visitsedona {
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
   color: #000000;
   margin-right: 0;
   padding: auto 0;
@@ -511,7 +563,8 @@ cursor: pointer;
 .footer-social {
   text-align: center;
   align-items: center;
-  margin: 0;
+  margin: 5px;
+
 }
 
 .footer-social ul {
@@ -526,7 +579,9 @@ cursor: pointer;
 
 .footer-social li {
   margin: 0 5px;
+  fill: #ffffff;
 }
+
 
 .social-button {
   display: flex;
@@ -555,16 +610,27 @@ cursor: pointer;
 
 .footer-copyright b {
   margin-right: 10px;
+  font-size: 13px;
 }
 
 .footer-copyright .button {
   height: 40px;
+  color: black;
 }
 
 .footer-copyright .button img {
   height: 100%;
   width: auto;
 }
+
+.footer-copyright .button:hover {
+background-image: url(../img/academy-logo-hover3.png);
+}
+
+.footer-copyright .button:active {
+background-image: url(../img/academy-logo-active3.png);
+}
+
 
 /* Далее страница выбора отелей */
 
@@ -580,6 +646,8 @@ cursor: pointer;
   color: #000000;
   text-transform: uppercase;
   background-color: #ffffff;
+  box-shadow: 0 0 5px 3px #dedfdf;
+
 
 }
 
@@ -606,6 +674,8 @@ cursor: pointer;
  .hotels-list .catalog-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+
  }
 
  .catalog-list .catalog-item {
@@ -613,17 +683,20 @@ cursor: pointer;
    flex-direction: row;
    justify-content: space-between;
    align-items: stretch;
-   padding: 25px 70px;
-   border-bottom: 1px solid gray;
+   padding: 12px 70px;
+   padding-top: 28px;
+   border-bottom: 1px solid #e5e5e5;
+   border-top: 1px solid #e5e5e5;
  }
 
  .catalog-list .catalog-item:first-child {
-  border-top: 1px solid gray;
- }
+   }
 
  .catalog-item-left {
   display: flex;
   align-items: stretch;
+  padding: 0;
+
  }
 
  .catalog-item-right {
@@ -633,24 +706,38 @@ cursor: pointer;
   align-items: flex-end;
  }
 
+
  .hotel-link {
-  width: 120px;
-  margin-right: 20px;
+  width: auto;
+  height: auto;
+      margin-right: 32px;
   overflow: hidden;
  }
 
  .hotel-link img {
-  width: auto;
-  height: 100%;
+  width: 135px;
+  height: auto;
 }
 
 .catalog-item-info h3 {
-  margin-top: 0;
-  margin-bottom: 0;
+      margin-top: -6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+}
+
+.catalog-item-info h3:hover,
+.catalog-item-info h3:focus {
+color: #91b2d0;
+}
+
+.catalog-item-info h3:active {
+color: #c9c9c9;
 }
 
 .catalog-item-info-extra {
   display: flex;
+      margin-bottom: 17px;
+      margin-right: 6px;
 }
 
 .catalog-item-info-extra div {
@@ -661,7 +748,8 @@ cursor: pointer;
   font-size: 14px;
   display: block;
   color: gray;
-  margin-bottom: 15px;
+      margin-bottom: 14px;
+      margin-right: 10px;
 }
 
 .catalog-item-info-extra a {
@@ -673,12 +761,47 @@ cursor: pointer;
 }
 
 .catalog-item-info-extra .button-more {
-  background: teal;
+  background-color: #90b2d0;
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 17px;
 }
 
-.catalog-item-info-extra .button-book {
-  background: brown;
+.button-more:hover,
+.button-more:focus
+ {
+  background-color: #799cbd;
+
 }
+
+.button-more:active {
+  background-color: #6c94ba;
+  color: #a0b8d0;
+}
+
+
+.catalog-item-info-extra .button-book {
+  background: #706358;
+  width: 142px;
+  height: 27px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+}
+
+.catalog-item-info-extra .button-book:hover,
+.catalog-item-info-extra .button-book:focus {
+background-color: #5c4f45;
+}
+
+.catalog-item-info-extra .button-book:active {
+background-color: #4d4036;
+color: #8f8984;
+}
+
 
  .hotel-choosing {
 
@@ -697,11 +820,11 @@ cursor: pointer;
   justify-content: space-between;
   background-image: url("../img/background-blur.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   width: auto;
   height: 217px;
   background-color: black;
-  padding: 32px 72px;
+padding: 27px 68px;
 
 
 }
@@ -724,6 +847,9 @@ cursor: pointer;
   display: block;
   cursor: pointer;
   user-select: none;
+  font-size: 14px;
+  line-height: 27px;
+  padding-left: 6px;
 
 }
 
@@ -735,8 +861,8 @@ cursor: pointer;
 .filter-input-checkbox + label::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   top: 0;
   left: -37px;
   background-image: url("../img/checkbox-off.svg");
@@ -749,9 +875,10 @@ cursor: pointer;
 .filter-input-checkbox:checked + label::after {
   background-image: url("../img/checkbox-on.svg");
   background-size: 104%;
-  width: 23px;
+      width: 27px;
+
 }
-  
+
 
 
 .hotel-choosing-wrapper legend {
@@ -771,12 +898,17 @@ cursor: pointer;
 
 .hotel-choosing .cost-fields {
   flex-grow: 2;
+
 }
 
 .filter-range {
-  width: 330px;
+  width: 319px;
   color: #ffffff;
   text-transform: uppercase;
+  position: absolute;
+  top: 9%;
+      right: 5%;
+
 }
 
 .filter-range-title {
@@ -797,10 +929,14 @@ cursor: pointer;
 
 }
 
-.infrastructure-and-type {
+.infrastructure {
   padding: 0;
 }
 
+.type-of-hotel {
+  margin-left: -104px;
+      margin-top: 3px;
+}
 
 .day-cost {
   max-width: 300px;
@@ -819,6 +955,7 @@ cursor: pointer;
   align-items: center;
   justify-content: space-between;
   padding: 0 72px;
+  height: 86px;
 }
 
 .searching-results-title {
@@ -833,20 +970,28 @@ cursor: pointer;
 
 .searching-results-arrows .order {
   margin-left: 8px;
+  color: grey;
+
 }
 
 .how-to-sort {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-top: 4px;
 }
 
 .how-to-sort h4 {
   margin-right: 30px;
+margin-left: 7px;
+font-size: 11px;
+line-height: 18px;
+
 }
 
 .how-to-sort a {
   margin-right: 25px;
+      font-size: 11px;
   line-height: 13px;
   color: gray;
   border-bottom: 1px dotted gray;
@@ -854,10 +999,161 @@ cursor: pointer;
 
 .how-to-sort a:hover,
 .how-to-sort a.active {
-  color: teal;
-  border-color: teal;
+  color: #a0b8d0;
+  border-color: transparent;
+
 }
 
 .how-to-sort a.active {
   border-color: transparent;
+}
+
+.filter-range {
+  width: 319px;
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  height: 37px;
+  margin-bottom: 20px;
+  font-size: 0;
+  position: relative;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+    color: inherit;
+    font: inherit;
+position:absolute;
+top: 168.3px;
+  background: none;
+  border: none;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+      top: -9px;
+      background-color: #ababab;
+      border: 8px solid #ffffff;
+      padding: 2px;
+      border-radius: 50%;
+      cursor: pointer;
+}
+
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
+.price-from-to {
+
+}
+.catalog-item-right .rating-stars img {
+  padding-left: 3px;
+}
+
+.rating {
+  font-size: 14px;
+padding-bottom: 18px;
+padding-right: 15px;
+}
+
+.catalog-list .catalog-item:last-child {
+
+  border-bottom: 1px solid gray;
+
 }

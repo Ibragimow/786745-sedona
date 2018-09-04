@@ -30,7 +30,7 @@
           <form class="filter" method="post" action="https://echo.htmlacademy.ru">
           <div class="hotel-choosing-wrapper">
           <fieldset>
-            <div class="infrastructure-and-type">
+            <div class="infrastructure">
             <legend>Инфраструктура:</legend>
             <ul class="comforts">
               <li class="filter-option">
@@ -49,7 +49,7 @@
           </div>
           </fieldset>
           <fieldset>
-            <div class="infrastructure-and-type">
+            <div class="type-of-hotel">
           <legend>Тип жилья:</legend>
             <ul class="comforts">
               <li class="filter-option">
@@ -69,20 +69,26 @@
           </fieldset>
 
         <fieldset class="cost-fields">
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+              <div class="price-from-to">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <div>
+        <div class="price-from-to">
+          <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+        <div>
 
-          <div class="day-cost">
-            <legend>Стоимость в сутки (Р):</legend>
-            <div class="accommodation-cost">
-              <section class="visually-hidden cost-range">
-                <p>От 0</p>
-              </section>
-              <section class="visually-hidden cost-range">
-                <p>До 3000</p>
-              </section>
-            </div>
-            <input type="range" name="cost-of-living" id="cost-of-living" step="1000" min="0" max="4000" value="3000">
-          <button type="submit" class="filter-button button">Показать</button>
-          </div>
+</div>
+<div class="range-controls">
+  <div class="scale">
+  <div class="bar"></div>
+</div>
+<div class="range-toggle range-toggle-min"></div>
+<div class="range-toggle range-toggle-max"></div>
+</div>
+<button class="btn-transparent" type="submit">Показать</button>
+</div>
           </fieldset>
         </form>
       </div>
@@ -91,10 +97,10 @@
       <div class="catalog">
         <div class="searching-results">
           <div class="searching-results-title">
-            <h3>Найдено:3</h3>
-            
+            <h3>Найдено: 3</h3>
+
             <div class="how-to-sort">
-              <h4>Сортировка</h4>
+              <h4>Сортировка:</h4>
               <a href="#" class="hotels-order active" id="by-price">По цене</a>
               <a href="#" class="hotels-order" id="by-type">По типу</a>
               <a href="#" class="hotels-order" id="by-rating">По рейтингу</a>
@@ -102,8 +108,11 @@
           </div>
 
           <div class="searching-results-arrows">
-            <a href="#" class="order" id="hotels-order-up"><img src="img/icon-up-off.svg" alt="Сортировка по возрастанию"></a>
-            <a href="#" class="order" id="hotels-order-down"><img src="img/icon-down-on.svg" alt="Сортировка по убыванию"></a>
+            <a href="#" class="order" id="hotels-order-up"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+            <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
+            </svg></a>
+            <a href="#" class="order" id="hotels-order-down"><img src="img/icon-down-default.svg" alt="Сортировка по убыванию"></a>
           </div>
         </div>
         <div class="hotels-list">
@@ -111,9 +120,8 @@
           <li class="catalog-item">
             <div class="catalog-item-left">
               <a href="#" class="hotel-link" id="amara-hotel">
-                <img src="img/amara-resort-and-spa.jpg" alt="Amara hotel">
+                <img src="img/amara2.jpg" alt="Amara hotel">
               </a>
-
               <div class="catalog-item-info">
                 <h3>AMARA RESORT & SPA</h3>
                 <div class="catalog-item-info-extra">
@@ -128,7 +136,6 @@
                 </div>
               </div>
             </div>
-
             <div class="catalog-item-right">
               <div class="rating-stars">
                 <img src="img/star-rating.svg" alt="Звезда рейтинга">
@@ -136,36 +143,63 @@
                 <img src="img/star-rating.svg" alt="Звезда рейтинга">
                 <img src="img/star-rating.svg" alt="Звезда рейтинга">
               </div>
-
               <span class="rating">Рейтинг: 8,5</span>
-            </div>            
+            </div>
           </li>
           <li class="catalog-item">
-            <h3>DESERT QUAIL INN</h3>
-            <a href="#" class="hotel-link" id="desert-hotel"><img src="img/desert-qual-inn.jpg" alt="Desert qual Inn hotel"></a>
+            <div class="catalog-item-left">
+            <a href="#" class="hotel-link" id="desert-hotel">
+              <img src="img/desert-qual-inn.jpg" alt="Desert qual Inn hotel">
+            </a>
+            <div class="catalog-item-info">
+              <h3>DESERT QUAIL INN</h3>
+              <div class="catalog-item-info-extra">
+                <div>
+                  <span>Мотель</span>
+                  <a class="button button-more" href="#">Подробнее</a>
+                </div>
+                <div>
+                  <span>от 4000 р.</span>
+                  <a class="button button-book" href="#">Забронировать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-item-right">
             <div class="rating-stars">
               <img src="img/star-rating.svg" alt="Звезда рейтинга">
               <img src="img/star-rating.svg" alt="Звезда рейтинга">
               <img src="img/star-rating.svg" alt="Звезда рейтинга">
             </div>
-            <span class="hotel-type">Мотель</span>
-            <span class="hotel-price">от 3000 р.</span>
-            <a class="button-more" href="#">Подробнее</a>
-            <a class="button-book" href="#">Забронировать</a>
             <span class="rating">Рейтинг: 8,9</span>
+          </div>
           </li>
           <li class="catalog-item">
+            <div class="catalog-item-left">
+              <a href="#" class="hotel-link" id="diablo-hotel">
+                <img src="img/villas-es-poco-diablo.jpg" alt="Villas Diablo hotel">
+              </a>
+            <div class="catalog-item-info">
             <h3>VILLAS ET POCO DIABLO</h3>
-            <a href="#" class="hotel-link" id="diablo-hotel"><img src="img/villas-es-poco-diablo.jpg" alt="Villas Diablo hotel"></a>
+            <div class="catalog-item-info-extra">
+              <div>
+                <span>Апартаменты</span>
+                <a class="button button-more" href="#">Подробнее</a>
+            </div>
+            <div>
+              <span>от 2000 р.</span>
+              <a class="button button-book" href="#">Забронировать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="catalog-item-right">
             <div class="rating-stars">
               <img src="img/star-rating.svg" alt="Звезда рейтинга">
               <img src="img/star-rating.svg" alt="Звезда рейтинга">
             </div>
-            <span class="hotel-type">Апартаменты</span>
-            <span class="hotel-price">от 2000 р.</span>
-            <a class="button-more" href="#">Подробнее</a>
-            <a class="button-reserve" href="#">Забронировать</a>
             <span class="rating">Рейтинг: 9,2</span>
+          </div>
           </li>
         </ul>
       </div>
@@ -180,7 +214,7 @@
         <li><a class="social-button" href="#" id="twitter"><span class="visually-hidden">Ссылка на Twitter</span>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
-          <image overflow="visible" width="17" height="15" xlink:href="t.png" >
+          <image overflow="visible" width="17" height="15">
           </image>
           <g id="W6EeEF_1_">
             <g>
@@ -202,7 +236,7 @@
         <li><a class="social-button" href="#" id="youtube"><span class="visually-hidden">Ссылка на Youtube</span>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
-          <image overflow="visible" enable-background="new    " width="20" height="16" xlink:href="youtube.png" >
+          <image overflow="visible" enable-background="new    " width="20" height="16">
           </image>
           <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
              M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
