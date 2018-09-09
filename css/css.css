@@ -9,7 +9,7 @@ body {
   padding-bottom: 0;
   max-width: 1200px;
   height: 100%;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 10px;
   line-height: 21px;
   color: #000000;
@@ -73,6 +73,10 @@ a {
   color: #90b1d0;
 }
 
+.header-point:active {
+  color: #c9c9c9;
+}
+
 .main-header {
   min-height: 56px;
 }
@@ -82,8 +86,6 @@ a {
   left: calc(50% - 70px);
   margin-top: 0;
 }
-
-
 
 .logo {
   margin-bottom: 7px;
@@ -113,6 +115,8 @@ padding-left: 54px;
       text-align: center;
       margin-top: 23px;
       margin-bottom: 29px;
+      padding-left: 300px;
+      padding-right: 300px;
 
 }
 
@@ -466,6 +470,7 @@ box-shadow: 0 0 5px 1px gray;
       background-image: url(../img/calendar.jpg);
       background-repeat: no-repeat;
       color: grey;
+      cursor: pointer;
 }
 
 .form-icon:hover,
@@ -481,7 +486,7 @@ box-shadow: 0 0 5px 1px gray;
 .form-icon {
   max-width: 100%;
   max-height: 100%;
-  repeat: 0;
+
 
 }
 
@@ -640,7 +645,6 @@ text-transform: uppercase;
   font-weight: bold;
   color: #000000;
   margin-right: 0;
-  padding: auto 0;
   cursor: pointer;
 
 }
@@ -714,7 +718,7 @@ fill: #98b4cf;
 width: 115px;
 height: 40px;
 background-image: url(../img/academy-logo-default.svg);
-padding-right: -10px;
+margin-right: -10px;
 background-repeat: no-repeat;
 }
 
@@ -999,7 +1003,7 @@ padding-top: 2px;
 }
 
 .hotel-choosing fieldset {
-  list-style: 0;
+  list-style: none;
   border: none;
   padding: 0;
   flex-grow: 1;
@@ -1266,7 +1270,6 @@ line-height: 18px;
   position: absolute;
   top: 88px;
   left: 82px;
-  right:
 }
 
 .btn-transparent:hover {
