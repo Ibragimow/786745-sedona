@@ -10,9 +10,9 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-        <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
-        </a>
+        <span class="main-header-logo">
+          <img src="img/sedona-logo.svg" width="139" height="71" alt="Логотип проекта Седона">
+        </span>
         <ul class="site-navigation navigation-left">
           <li><a class="header-point" href="#">Информация</a></li>
           <li><a class="header-point" href="#">Фото и видео</a></li>
@@ -24,8 +24,12 @@
       </nav>
     </header>
     <main class="container">
-      <div>
-        <img class="welcome-text" src="img/back-cut.jpg" alt="Добро пожаловать в Седону!">
+      <div class="welcome-to-sedona">
+        <img src="img/welcome.svg" width="510" height="300" class="welcoming-message" alt="Welcome to Sedona">
+        <span class="polygon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 57"><path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" fill="#fff"/></svg>
+      </span>
+        </div>
       </div>
       <section class="sedona-is">
         <h1 class="visually-hidden">Отдых в Седоне</h1>
@@ -40,24 +44,24 @@
           <p>Седона &mdash; не аттракцион для туристов, Там течет своя жизнь</p>
         </section>
         <div class="feature-pic">
-          <img class="background-image" src="img/true-town.jpg" alt="Настоящий городок">
+          <img class="background-image" src="img/true-town.jpg" width="800px" height="256px" alt="Настоящий городок">
         </div>
       </div>
       <div class="town-attractors">
         <h2 class="visually-hidden">Преимущества "настоящего городка"</h2>
         <div class="feature-one">
           <div class="town-feature-item">
-            <img class="logo" src="img/residential.svg" alt="Жильё">
+            <img class="logo" src="img/residential.svg" width="75px" height="72px" alt="Жильё">
             <h2>Жильё</h2>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
           <div class="town-feature-item">
-            <img class="logo" src="img/food.svg" alt="Еда">
+            <img class="logo" src="img/food.svg" width="75px" height="72px" alt="Еда">
             <h2>Еда</h2>
             <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
           </div>
           <div class="town-feature-item">
-            <img class="logo" src="img/gifts-2.svg" alt="Сувениры">
+            <img class="logo" src="img/gifts-2.svg" width="75px" height="72px" alt="Сувениры">
             <h2>Сувениры</h2>
             <p>Не только китайского, но и местного производства!</p>
           </div>
@@ -66,7 +70,7 @@
       <h2 class="visually-hidden">Вторая причина</h2>
       <div class="feature-big">
         <div class="feature-pic">
-          <img class="background-image" src="img/devil-bridge.jpg" alt="Мост Дьявола">
+          <img class="background-image" src="img/devil-bridge.jpg" width="800px" height="256px" alt="Мост Дьявола">
         </div>
         <div class="feature-text">
           <h2>Там есть <br> мост Дьявола</h2>
@@ -117,7 +121,9 @@
             <div class="number-of-tourists">
               <div class="form-container">
                 <label for="adults">Взрослые:</label>
+                <input type="button" value="-" class="minus">
                 <input class="label-left" type="number" name="tourists" id="adults" value="2">
+                <input type="button" value="+" class="plus">
               </div>
               <div class="form-container">
                 <label class="label-center" for="kids">Дети:</label>
