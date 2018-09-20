@@ -20,11 +20,20 @@ body {
 .welcome-to-sedona {
 	width: 1200px;
 	height: 491px;
+	position: relative;
 }
 
-.polygon {
-
+.welcome-to-sedona::after {
+	background-image: url(../img/polygon.svg);
+	width: 100%;
+	content: "";
+	height: 59px;
+	bottom: -20px;
+	display: block;
+	position: absolute;
 }
+
+
 .welcoming-message {
 	background-position: center;
 	    width: 100%;
@@ -78,8 +87,9 @@ a {
 }
 
 .navigation-right li:first-child {
-	margin-left: 127px;
+	margin-left: 123px;
 	text-align: center;
+	letter-spacing: 0.3px;
 }
 
 .header-point:hover,
@@ -133,8 +143,8 @@ a {
 	font-weight: 700;
 	color: #000000;
 	text-align: center;
-	padding-top: 41px;
-	padding-bottom: 29px;
+	padding-top: 59px;
+	    padding-bottom: 12px;
 	padding-left: 300px;
 	padding-right: 300px;
 	background-color: #ffffff;
@@ -151,6 +161,8 @@ a {
 
 .sedona-is {
 	background-color: #ffffff;
+	min-height: 216px;
+	margin-bottom: -15px;
 }
 
 .feature-big {
@@ -427,7 +439,9 @@ a {
 	text-align: left;
 }
 
-.form-container input {
+.form-container .input-left,
+.form-container .input-right,
+.form-container .in-out-date {
 	height: 15px;
 	flex-grow: 1;
 	flex-shrink: 1;
@@ -438,16 +452,23 @@ a {
 	text-align: left;
 }
 
-.form-container input:hover,
-.form-container input:focus {
+.form-container .input-left:hover,
+.form-container .input-right:hover,
+.form-container .in-out-date:hover,
+.form-container .input-left:focus,
+.form-container .input-right:focus,
+.form-container .in-out-date:focus {
 	background-color: #eaeaea;
 	outline: 0;
 	height: 15px;
+	cursor: pointer;
 }
 
-.form-container input:active,
-.form-container input:focus {
+.form-container .input-left:active,
+.form-container .input-right:active,
+.form-container .in-out-date:active {
 	box-shadow: 0 0 0 2px #e4e4e4;
+	background-color: #ffffff;
 }
 
 .with-icon {
@@ -502,14 +523,29 @@ a {
 	margin-top: 1px;
 }
 
-.number-of-tourists .form-container {
-	width: 50%;
+.form-container-left {
+	position: relative;
+	width: 224px;
 }
 
-.number-of-tourists .form-container label,
-.number-of-tourists .form-container input {
-	width: 50%;
+.form-container-right {
+	position: relative;
+    width: 178px;
 }
+
+.number-of-tourists .input-left,
+.number-of-tourists .input-right {
+	width: 87px;
+	flex-grow: 0;
+	margin-left: auto;
+	background-color: #f2f2f2;
+}
+
+.number-of-tourists .input-left:hover,
+.number-of-tourists .input-right:focus {
+	background-color: #eaeaea;
+}
+
 
 .number-of-tourists .form-container input {
 	text-align: center;
@@ -733,6 +769,7 @@ a {
 	color: #000000;
 	text-transform: uppercase;
 	background-color: #ffffff;
+	background-image: none;
 	box-shadow: 0 0 5px 3px #dedfdf;
 }
 
@@ -901,8 +938,47 @@ a {
 	padding-bottom: 7px;
 }
 
-button .minus {
+.minus {
+	background-image: url(../img/minus-2.png);
+	width: 12px;
+	height: 3px;
+	border: none;
+	position: absolute;
+	right: 86px;
+	cursor: pointer;
+}
 
+.minus:hover,
+.minus:focus {
+	background-image: url(../img/minus-hover.png);
+	cursor:pointer;
+}
+
+.minus:active {
+	background-image: url(..img/minus-active.png);
+}
+
+.plus {
+	background-image: url(../img/plus-2.png);
+	background-color: transparent;
+	width: 11px;
+	height: 11px;
+	border: none;
+	position: absolute;
+	right: 11px;
+	cursor: pointer;
+}
+
+.plus:hover,
+.plus:focus {
+	background-image: url(..img/plus-hover.png);
+	width: 11px;
+	height: 11px;
+
+}
+
+.plus:active {
+	background-image: url(../img/plus-active.png);
 }
 
 .price-from-to {
@@ -914,7 +990,7 @@ button .minus {
 
 .hotel-choosing-wrapper ul {
 	list-style: none;
-	margin-top: 22px;
+	margin-top: 24px;
 }
 
 .filter-option {
@@ -923,7 +999,7 @@ button .minus {
 	line-height: 21px;
 	margin-bottom: 25px;
 	padding-left: 38px;
-	padding-top: 1px;
+	padding-top: 2px;
 }
 
 .filter-option label {
@@ -944,8 +1020,8 @@ button .minus {
 .filter-input-checkbox+label::after {
 	content: "";
 	position: absolute;
-	width: 24px;
-	height: 24px;
+	width: 23px;
+	height: 23px;
 	top: -2px;
 	left: -37px;
 	background-image: url(../img/checkbox-off.svg);
@@ -957,14 +1033,16 @@ button .minus {
 
 .filter-input-checkbox:checked+label::after {
 	background-image: url("../img/checkbox-on.svg");
-	width: 29px;
+	width: 27px;
+	height: 23px;
 }
 
 .hotel-choosing-wrapper label {
 	color: white;
 	font-size: 15px;
 	line-height: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
+	letter-spacing: -0.5px;
 }
 
 .hotel-choosing-wrapper:nth-child(2) label {

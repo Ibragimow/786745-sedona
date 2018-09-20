@@ -26,10 +26,6 @@
     <main class="container">
       <div class="welcome-to-sedona">
         <img src="img/welcome.svg" width="510" height="300" class="welcoming-message" alt="Welcome to Sedona">
-        <span class="polygon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 57"><path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" fill="#fff"/></svg>
-      </span>
-        </div>
       </div>
       <section class="sedona-is">
         <h1 class="visually-hidden">Отдых в Седоне</h1>
@@ -119,15 +115,17 @@
               <div class="form-icon"></div>
             </div>
             <div class="number-of-tourists">
-              <div class="form-container">
+              <div class="form-container form-container-left">
                 <label for="adults">Взрослые:</label>
-                <input type="button" value="-" class="minus">
-                <input class="label-left" type="number" name="tourists" id="adults" value="2">
-                <input type="button" value="+" class="plus">
+                <input type="button" class="minus">
+                <input class="input-left" type="text" name="tourists" id="adults" value="2">
+                <input type="button" class="plus">
               </div>
-              <div class="form-container">
-                <label class="label-center" for="kids">Дети:</label>
-                <input type="number" name="tourists" id="kids" value="0">
+              <div class="form-container form-container-right">
+                <label for="kids">Дети:</label>
+                <input type="button" class="minus">
+                <input class="input-right" type="text" name="tourists" id="kids" value="0">
+                <input type="button" class="plus">
               </div>
             </div>
             <button type="submit" class="accommodation-button">Найти</button>
@@ -186,7 +184,9 @@
         </p>
       </div>
     </footer>
+    <script src="myscripts.js"></script>
     <script>
+      'use strict';
       function showAccommodationForm() {
         var form = document.getElementById('accommodationForm');
         form.classList.toggle('hidden');
