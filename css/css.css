@@ -966,7 +966,8 @@ a {
 }
 
 .minus:active {
-	background-image: url(..img/minus-active.png);
+	background-image: url(../img/minus-active.png);
+	cursor: pointer;
 }
 
 .plus {
@@ -988,6 +989,7 @@ a {
 
 .plus:active {
 	background-image: url(../img/plus-active.png);
+	cursor:pointer;
 }
 
 .price-from-to {
@@ -1214,6 +1216,7 @@ l .header-label:nth-child(2) {
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 17px;
+	
 }
 
 .price-controls {
