@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/css.css" rel="stylesheet">
+    <link href="css/normalize-minimized.css" rel="stylesheet">
+    <link href="css/css-minimized.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -40,24 +40,24 @@
           <p>Седона &mdash; не аттракцион для туристов, Там течет своя жизнь</p>
         </section>
         <div class="feature-pic">
-          <img class="background-image" src="img/true-town.jpg" width="800px" height="256px" alt="Настоящий городок">
+          <img class="background-image" src="img/true-town.jpg" width="800" height="256" alt="Настоящий городок">
         </div>
       </div>
       <div class="town-attractors">
         <h2 class="visually-hidden">Преимущества "настоящего городка"</h2>
         <div class="feature-one">
           <div class="town-feature-item">
-            <img class="logo" src="img/residential.svg" width="75px" height="72px" alt="Жильё">
+            <img class="logo" src="img/residential.svg" width="75" height="72" alt="Жильё">
             <h2>Жильё</h2>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
           <div class="town-feature-item">
-            <img class="logo" src="img/food.svg" width="75px" height="72px" alt="Еда">
+            <img class="logo" src="img/food.svg" width="75" height="72" alt="Еда">
             <h2>Еда</h2>
             <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
           </div>
           <div class="town-feature-item">
-            <img class="logo" src="img/gifts-2.svg" width="75px" height="72px" alt="Сувениры">
+            <img class="logo" src="img/gifts-2.svg" width="75" height="72" alt="Сувениры">
             <h2>Сувениры</h2>
             <p>Не только китайского, но и местного производства!</p>
           </div>
@@ -66,7 +66,7 @@
       <h2 class="visually-hidden">Вторая причина</h2>
       <div class="feature-big">
         <div class="feature-pic">
-          <img class="background-image" src="img/devil-bridge.jpg" width="800px" height="256px" alt="Мост Дьявола">
+          <img class="background-image" src="img/devil-bridge.jpg" width="800" height="256" alt="Мост Дьявола">
         </div>
         <div class="feature-text">
           <h2>Там есть <br> мост Дьявола</h2>
@@ -117,15 +117,15 @@
             <div class="number-of-tourists">
               <div class="form-container form-container-left">
                 <label for="adults">Взрослые:</label>
-                <input type="button" class="minus">
+                <span class="minus"></span>
                 <input class="input-left" type="text" name="tourists" id="adults" value="2">
-                <input type="button" class="plus">
+                <span class="plus"></span>
               </div>
               <div class="form-container form-container-right">
                 <label for="kids">Дети:</label>
-                <input type="button" class="minus">
+                <span class="minus"></span>
                 <input class="input-right" type="text" name="tourists" id="kids" value="0">
-                <input type="button" class="plus">
+                <span class="plus"></span>
               </div>
             </div>
             <button type="submit" class="accommodation-button">Найти</button>
@@ -184,13 +184,6 @@
         </p>
       </div>
     </footer>
-    <script src="myscripts.js"></script>
-    <script>
-      'use strict';
-      function showAccommodationForm() {
-        var form = document.getElementById('accommodationForm');
-        form.classList.toggle('hidden');
-      }
-    </script>
-  </body>
+    <script src="js/myscripts.js"></script>
+   </body>
 </html>
